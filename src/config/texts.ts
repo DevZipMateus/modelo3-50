@@ -180,7 +180,9 @@ export const siteTexts = {
     },
     address: {
       title: "Endereço",
-      full: "Rua Castro e Silva, nº 942, Centro\nFortaleza - CE\nCep: 60.030-010"
+      full: "Rua Castro e Silva, nº 942, Centro
+<br>Fortaleza - CE</br>
+<br>Cep: 60.030-010</br>"
     },
     hours: {
       title: "Horário de Atendimento",
