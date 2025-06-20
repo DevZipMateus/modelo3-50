@@ -64,55 +64,55 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white overflow-hidden">
+      <div className="container mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-block bg-amber-100 text-amber-600 font-medium px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm mb-4">
+        <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16">
+          <div className="inline-block bg-amber-100 text-amber-600 font-medium px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm mb-3 sm:mb-4">
             {siteTexts.services.badge}
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-4 sm:mb-6 break-words">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 mb-3 sm:mb-4 md:mb-6 px-2">
             {siteTexts.services.title}
           </h2>
-          <p className="text-neutral-600 text-base sm:text-lg leading-relaxed">
+          <p className="text-neutral-600 text-sm sm:text-base md:text-lg leading-relaxed px-2">
             {siteTexts.services.description}
           </p>
         </div>
         
         {/* Services Grid - improved responsive layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-8 sm:mb-12 md:mb-16">
           {services.map((service) => (
             <div 
               key={service.id} 
-              className="bg-white rounded-xl p-4 sm:p-6 border border-neutral-100 shadow-sm hover:shadow-lg hover:border-amber-200 transition-all duration-300 transform hover:scale-[1.02] animate-fade-in group w-full min-w-0"
+              className="bg-white rounded-xl p-4 sm:p-5 md:p-6 border border-neutral-100 shadow-sm hover:shadow-lg hover:border-amber-200 transition-all duration-300 transform hover:scale-[1.02] animate-fade-in group w-full"
               style={{ animationDelay: service.delay }}
             >
-              <div className="bg-amber-100 group-hover:bg-amber-200 p-3 sm:p-4 rounded-lg inline-block mb-4 sm:mb-5 transition-colors">
-                <service.icon className="text-amber-600" size={24} />
+              <div className="bg-amber-100 group-hover:bg-amber-200 p-2 sm:p-3 md:p-4 rounded-lg inline-block mb-3 sm:mb-4 md:mb-5 transition-colors">
+                <service.icon className="text-amber-600" size={20} />
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-neutral-900 break-words">{service.title}</h3>
-              <p className="text-neutral-600 text-sm leading-relaxed break-words">{service.description}</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 text-neutral-900 leading-tight hyphens-auto">{service.title}</h3>
+              <p className="text-neutral-600 text-xs sm:text-sm md:text-base leading-relaxed hyphens-auto">{service.description}</p>
             </div>
           ))}
         </div>
         
         {/* CTA - improved mobile layout */}
-        <div className="text-center">
-          <div className="bg-neutral-50 rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-3 sm:mb-4 break-words">
+        <div className="text-center px-2">
+          <div className="bg-neutral-50 rounded-2xl p-4 sm:p-6 md:p-8 max-w-3xl mx-auto">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900 mb-3 sm:mb-4 leading-tight">
               {siteTexts.services.ctaTitle}
             </h3>
-            <p className="text-neutral-600 mb-6 text-sm sm:text-base leading-relaxed">
+            <p className="text-neutral-600 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base leading-relaxed">
               {siteTexts.services.ctaDescription}
             </p>
             <a 
               href="https://wa.me/5585982384438" 
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-black hover:bg-neutral-800 text-amber-400 px-6 sm:px-8 py-3 sm:py-4 rounded-md transition-all inline-flex items-center justify-center gap-2 sm:gap-3 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+              className="w-full sm:w-auto bg-black hover:bg-neutral-800 text-amber-400 px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-md transition-all inline-flex items-center justify-center gap-2 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 text-xs sm:text-sm md:text-base"
             >
-              <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-              <span className="truncate">{siteTexts.services.ctaButton}</span>
+              <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
+              <span className="whitespace-nowrap">{siteTexts.services.ctaButton}</span>
             </a>
           </div>
         </div>

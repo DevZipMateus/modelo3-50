@@ -52,55 +52,55 @@ const team = [{
 
 const Team = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white overflow-hidden">
+      <div className="container mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-block bg-corporate-blue/10 text-corporate-blue font-medium px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm mb-4">
+        <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16">
+          <div className="inline-block bg-corporate-blue/10 text-corporate-blue font-medium px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm mb-3 sm:mb-4">
             {siteTexts.team.badge}
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight break-words">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 leading-tight px-2">
             {siteTexts.team.title}
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed">
+          <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed px-2">
             {siteTexts.team.description}
           </p>
         </div>
         
-        {/* Team Grid - cards with flexible height to accommodate full text */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+        {/* Team Grid - responsive layout with proper spacing */}
+        <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-items-center">
           {team.map(member => (
             <div 
               key={member.id} 
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in mx-auto w-full max-w-sm sm:max-w-none min-w-0 flex flex-col" 
+              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in w-full max-w-xs sm:max-w-sm md:max-w-none flex flex-col" 
               style={{ animationDelay: member.delay }}
             >
-              <div className="relative overflow-hidden h-56 sm:h-64 lg:h-72 flex-shrink-0">
+              <div className="relative overflow-hidden aspect-[3/4] flex-shrink-0">
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+                  className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" 
                 />
               </div>
               
-              <div className="p-4 sm:p-6 flex-1 flex flex-col">
-                <div className="mb-4 text-center">
-                  <p className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 leading-tight break-words">
+              <div className="p-3 sm:p-4 md:p-6 flex-1 flex flex-col">
+                <div className="mb-3 sm:mb-4 text-center flex-1">
+                  <p className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-1 sm:mb-2 leading-tight">
                     {member.name}
                   </p>
-                  <p className="text-corporate-blue font-medium text-sm sm:text-base break-words">
+                  <p className="text-corporate-blue font-medium text-xs sm:text-sm md:text-base mb-1">
                     {member.role}
                   </p>
                   {member.crc && (
-                    <p className="text-corporate-blue font-medium text-sm sm:text-base break-words">
+                    <p className="text-corporate-blue font-medium text-xs sm:text-sm md:text-base mb-1">
                       {member.crc}
                     </p>
                   )}
-                  <p className="text-orange-500 mt-2 font-medium text-xs sm:text-sm leading-tight break-words">
+                  <p className="text-orange-500 mt-1 sm:mt-2 font-medium text-xs sm:text-sm leading-tight">
                     {member.sector}
                   </p>
                 </div>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed break-words text-center">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed text-center mt-auto">
                   {member.description}
                 </p>
               </div>
