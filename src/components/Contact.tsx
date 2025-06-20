@@ -22,7 +22,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {/* WhatsApp Card */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in">
-            <div className="bg-emerald-500 p-6 flex items-center justify-center">
+            <div className="bg-emerald-500 p-6 flex items-center justify-center px-[30px]">
               <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-16 h-16" />
             </div>
             <div className="p-6 text-center">
@@ -35,20 +35,7 @@ const Contact = () => {
           </div>
           
           {/* Phone Card */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
-          animationDelay: '0.1s'
-        }}>
-            <div className="bg-amber-400 p-6 flex items-center justify-center">
-              <Phone className="w-16 h-16 text-white" />
-            </div>
-            <div className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">Telefone</h3>
-              <p className="text-neutral-600 mb-4">Fale diretamente conosco</p>
-              <a href="tel:+5511987654321" className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium">
-                <span>(11) 98765-4321</span>
-              </a>
-            </div>
-          </div>
+          
           
           {/* Email Card */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
@@ -61,7 +48,7 @@ const Contact = () => {
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">E-mail</h3>
               <p className="text-neutral-600 mb-4">Envie sua mensagem</p>
               <a href="mailto:contato@contabilidade.com" className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium">
-                <span>contato@contabilidade.com</span>
+                <span>marianocontabilidade@hotmail.com</span>
               </a>
             </div>
           </div>
