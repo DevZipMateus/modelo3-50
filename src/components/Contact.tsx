@@ -90,16 +90,13 @@ RUA CASTRO E SILVA 942 CENTRO FORTALEZA - CE CEP: 60030-010</p>
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-neutral-600">Segunda - Sexta:</span>
-                  <span className="font-medium text-neutral-900">08:00 - 18:00</span>
+                  <span className="font-medium text-neutral-900">08:00 - 17:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-neutral-600">Sábado:</span>
-                  <span className="font-medium text-neutral-900">09:00 - 13:00</span>
+                  
+                  
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-neutral-600">Domingo:</span>
-                  <span className="font-medium text-neutral-900">Fechado</span>
-                </div>
+                
               </div>
             </div>
           </div>
