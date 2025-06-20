@@ -6,7 +6,6 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
-import Plans from '../components/Plans';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import FloatingButton from '../components/FloatingButton';
@@ -18,15 +17,14 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Header />
       
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-hidden">
         <Hero />
         <Services />
         <AboutUs />
         <Team />
-        <Plans />
         <Testimonials />
         <Contact />
       </main>
