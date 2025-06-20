@@ -66,7 +66,7 @@ const Contact = () => {
               </div>
               <div className="min-w-0 flex-1">
                 <h4 className="text-lg sm:text-xl font-semibold text-neutral-900 mb-2">{siteTexts.contact.address.title}</h4>
-                <p className="text-neutral-600 whitespace-pre-line text-sm sm:text-base leading-relaxed">{siteTexts.contact.address.full}</p>
+                <p className="text-neutral-600 text-sm sm:text-base leading-relaxed" dangerouslySetInnerHTML={{ __html: siteTexts.contact.address.full }}></p>
               </div>
             </div>
             
@@ -76,7 +76,6 @@ const Contact = () => {
               <div className="space-y-2">
                 <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
                   <span className="text-neutral-600 text-sm sm:text-base">{siteTexts.contact.hours.weekdays}</span>
-                  <span className="font-medium text-neutral-900 text-sm sm:text-base">{siteTexts.contact.hours.weekdaysTime}</span>
                 </div>
               </div>
             </div>

@@ -183,8 +183,8 @@ export const siteTexts = {
     },
     hours: {
       title: "Horário de Atendimento",
-      weekdays: "Segunda - Sexta:",
-      weekdaysTime: "08:00 - 17:00"
+      weekdays: "Segunda a sexta-feira, das 08h00 às 17h00",
+      weekdaysTime: ""
     }
   },
   header: {
