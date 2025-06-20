@@ -1,7 +1,10 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+
 const Footer = () => {
-  return <footer className="bg-black text-white">
+  return (
+    <footer className="bg-black text-white">
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Contact Information */}
@@ -24,9 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Technical Responsibles */}
-          <div className="animate-fade-in" style={{
-          animationDelay: '0.05s'
-        }}>
+          <div className="animate-fade-in" style={{ animationDelay: '0.05s' }}>
             <h3 className="text-xl font-semibold mb-6">Responsáveis Técnicos</h3>
             <div className="space-y-4">
               <div>
@@ -44,9 +45,7 @@ const Footer = () => {
           </div>
           
           {/* Quick Links */}
-          <div className="animate-fade-in" style={{
-          animationDelay: '0.1s'
-        }}>
+          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <h3 className="text-xl font-semibold mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
               <li>
@@ -65,26 +64,23 @@ const Footer = () => {
           </div>
           
           {/* Social Media */}
-          <div className="animate-fade-in" style={{
-          animationDelay: '0.15s'
-        }}>
+          <div className="animate-fade-in" style={{ animationDelay: '0.15s' }}>
             <h3 className="text-xl font-semibold mb-6">Redes Sociais</h3>
             <div className="flex space-x-4 mb-6">
-              
               <a href="https://www.instagram.com/marianocontabilidades?igsh=Ynhwa2d4ZDh0MnFu" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-amber-400/80 hover:text-black transition-colors duration-300 p-2 rounded-full">
                 <Instagram size={20} />
               </a>
-              
-              
             </div>
           </div>
         </div>
         
         {/* Copyright */}
         <div className="border-t border-white/10 mt-10 pt-6 text-center text-sm text-white/70">
-          <p>© {new Date().getFullYear()} ContaPlus. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Mariano Contabilidade. Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

@@ -30,6 +30,13 @@ const team = [
     role: 'Designer',
     image: '/lovable-uploads/becc6546-a49a-4db9-8c41-abd0009fac90.png',
     delay: '0.3s'
+  },
+  {
+    id: 5,
+    name: 'Mariano Junior',
+    role: 'Contador Senior',
+    image: '/lovable-uploads/f2cd93de-eb75-43bf-afb2-326afacd66c2.png',
+    delay: '0.4s'
   }
 ];
 
@@ -51,7 +58,7 @@ const Team = () => {
         </div>
         
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {team.map((member) => (
             <div 
               key={member.id}
@@ -69,7 +76,7 @@ const Team = () => {
               
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
+                <p className="text-lg font-semibold text-gray-900 mb-1">{member.name}</p>
                 <p className="text-corporate-blue mb-4">{member.role}</p>
                 
                 {/* Social Icons */}
