@@ -35,13 +35,13 @@ const Header = () => {
         <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
           {/* Contact Information */}
           <div className="flex flex-col md:flex-row md:space-x-6 text-sm text-gray-600 mb-2 md:mb-0 items-center">
-            <a href="mailto:contato@contabilidade.com" className="flex items-center hover:text-amber-500 transition-colors duration-300 mb-1 md:mb-0">
+            <a href="mailto:marianocontabilidade@hotmail.com" className="flex items-center hover:text-amber-500 transition-colors duration-300 mb-1 md:mb-0">
               <Mail size={16} className="mr-2" />
-              contato@contabilidade.com
+              marianocontabilidade@hotmail.com
             </a>
-            <a href="tel:+5511987654321" className="flex items-center hover:text-amber-500 transition-colors duration-300 whitespace-nowrap">
+            <a href="tel:+5585982384438" className="flex items-center hover:text-amber-500 transition-colors duration-300 whitespace-nowrap">
               <Phone size={16} className="mr-2" />
-              (11) 98765-4321
+              (85) 9 8238-4438
             </a>
           </div>
           
@@ -50,7 +50,7 @@ const Header = () => {
             <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
               <Facebook size={18} />
             </a>
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
+            <a href="https://www.instagram.com/marianocontabilidades?igsh=Ynhwa2d4ZDh0MnFu" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
               <Instagram size={18} />
             </a>
             <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">

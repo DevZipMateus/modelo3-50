@@ -6,24 +6,42 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="container-custom py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Contact Information */}
           <div className="animate-fade-in">
             <h3 className="text-xl font-semibold mb-6">Contato</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Phone className="mr-3 mt-1 flex-shrink-0" size={18} />
-                <span>(11) 98765-4321</span>
+                <span>(85) 9 8238-4438</span>
               </li>
               <li className="flex items-start">
                 <Mail className="mr-3 mt-1 flex-shrink-0" size={18} />
-                <span>contato@contabilidade.com</span>
+                <span>marianocontabilidade@hotmail.com</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="mr-3 mt-1 flex-shrink-0" size={18} />
-                <span>Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100</span>
+                <span>Fortaleza - CE</span>
               </li>
             </ul>
+          </div>
+
+          {/* Technical Responsibles */}
+          <div className="animate-fade-in" style={{ animationDelay: '0.05s' }}>
+            <h3 className="text-xl font-semibold mb-6">Responsáveis Técnicos</h3>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium text-amber-400">Mariano Junior</p>
+                <p className="text-sm text-white/80">CRC: CE-014818/O-5</p>
+              </div>
+              <div>
+                <p className="font-medium text-amber-400">Paloma Mariano</p>
+                <p className="text-sm text-white/80">CRC: CE-027945/O</p>
+              </div>
+              <div className="mt-4">
+                <p className="text-sm text-white/80">CNPJ: 44.448.908/0001-38</p>
+              </div>
+            </div>
           </div>
           
           {/* Quick Links */}
@@ -46,13 +64,13 @@ const Footer = () => {
           </div>
           
           {/* Social Media */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-fade-in" style={{ animationDelay: '0.15s' }}>
             <h3 className="text-xl font-semibold mb-6">Redes Sociais</h3>
             <div className="flex space-x-4 mb-6">
               <a href="#" className="bg-white/10 hover:bg-amber-400/80 hover:text-black transition-colors duration-300 p-2 rounded-full">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="bg-white/10 hover:bg-amber-400/80 hover:text-black transition-colors duration-300 p-2 rounded-full">
+              <a href="https://www.instagram.com/marianocontabilidades?igsh=Ynhwa2d4ZDh0MnFu" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-amber-400/80 hover:text-black transition-colors duration-300 p-2 rounded-full">
                 <Instagram size={20} />
               </a>
               <a href="#" className="bg-white/10 hover:bg-amber-400/80 hover:text-black transition-colors duration-300 p-2 rounded-full">
