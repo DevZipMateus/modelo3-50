@@ -130,11 +130,11 @@ export const siteTexts = {
     title: "Conheça os profissionais por trás dos nossos serviços",
     description: "Nossa equipe de especialistas está pronta para oferecer as melhores soluções contábeis para o seu negócio.",
     members: [
-      { name: "Maria Silva", role: "Diretora" },
-      { name: "Joel Antônio", role: "Contador" },
-      { name: "Jéssica Souza", role: "Contadora" },
-      { name: "Luiz Ricardo", role: "Designer" },
-      { name: "Mariano Junior", role: "Contador Senior" }
+      { name: "Paloma Mariano", role: "Contadora – CRC: CE-027945/O-5"},
+      { name: "Mariano Junior", role: "Contador – CRC: CE-014818/O-5" },
+      { name: "Mariana Rodrigues", role: "Secretaria" },
+      { name: "Ubiratan Oliveira", role: "Contador – CRC: CE-014574-O/8" },
+      { name: "Jackson Pereira", role: "Contador – CRC: CE-026056-O/5" }
     ]
   },
   testimonials: {
