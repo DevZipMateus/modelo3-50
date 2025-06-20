@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Linkedin, Mail } from 'lucide-react';
 import { siteTexts } from '../config/texts';
-
 const team = [{
   id: 1,
   name: siteTexts.team.members[0].name,
@@ -44,10 +42,8 @@ const team = [{
   image: '/lovable-uploads/f2cd93de-eb75-43bf-afb2-326afacd66c2.png',
   delay: '0.4s'
 }];
-
 const Team = () => {
-  return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
+  return <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white overflow-hidden">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
@@ -64,18 +60,11 @@ const Team = () => {
         
         {/* Team Grid - cards with flexible height to accommodate full text */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
-          {team.map(member => (
-            <div 
-              key={member.id} 
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in mx-auto w-full max-w-sm sm:max-w-none min-w-0 flex flex-col" 
-              style={{ animationDelay: member.delay }}
-            >
+          {team.map(member => <div key={member.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in mx-auto w-full max-w-sm sm:max-w-none min-w-0 flex flex-col" style={{
+          animationDelay: member.delay
+        }}>
               <div className="relative overflow-hidden h-56 sm:h-64 lg:h-72 flex-shrink-0">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
-                />
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
               </div>
               
               <div className="p-4 sm:p-6 flex-1 flex flex-col">
@@ -84,14 +73,11 @@ const Team = () => {
                   <p className="text-corporate-blue mb-2 font-medium text-sm sm:text-base break-words">{member.role}</p>
                   <p className="text-orange-500 mb-3 font-medium text-xs sm:text-sm leading-tight break-words">{member.sector}</p>
                 </div>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed break-words">{member.description}</p>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed break-words text-center">{member.description}</p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Team;
