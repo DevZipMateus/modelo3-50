@@ -1,14 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Phone, Mail, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const FloatingButton = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isPulsing, setIsPulsing] = useState(true);
   const isMobile = useIsMobile();
   
-  // Start pulsing effect every 5 seconds
+  // Start pulsing effect every 10 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setIsPulsing(true);
@@ -18,61 +17,28 @@ const FloatingButton = () => {
     return () => clearInterval(interval);
   }, []);
   
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    setIsPulsing(false); // Stop pulsing when opened
+  const openWhatsApp = () => {
+    window.open('https://wa.me/5585982384438', '_blank', 'noopener,noreferrer');
+    setIsPulsing(false); // Stop pulsing when clicked
   };
   
   return (
     <div className={`fixed ${isMobile ? 'bottom-3 right-3' : 'bottom-4 sm:bottom-6 lg:bottom-8 right-4 sm:right-6 lg:right-8'} z-50`}>
-      {/* Contact Options */}
-      <div className={`flex flex-col-reverse items-end mb-2 sm:mb-3 space-y-reverse space-y-1 sm:space-y-2 transition-all duration-500 ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-        <a 
-          href="https://wa.me/5585982384438" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="flex items-center bg-black text-amber-400 px-3 sm:px-4 py-2 rounded-md shadow-lg hover:bg-neutral-800 transition-all duration-300 gap-2 font-medium text-sm sm:text-base whitespace-nowrap"
-        >
-          <span>WhatsApp</span>
-        </a>
-        
-        <a 
-          href="tel:+5585982384438" 
-          className="flex items-center bg-black text-amber-400 px-3 sm:px-4 py-2 rounded-md shadow-lg hover:bg-neutral-800 transition-all duration-300 gap-2 font-medium text-sm sm:text-base whitespace-nowrap"
-        >
-          <span>Ligar</span>
-        </a>
-        
-        <a 
-          href="mailto:marianocontabilidade@hotmail.com" 
-          className="flex items-center bg-black text-amber-400 px-3 sm:px-4 py-2 rounded-md shadow-lg hover:bg-neutral-800 transition-all duration-300 gap-2 font-medium text-sm sm:text-base whitespace-nowrap"
-        >
-          <span>E-mail</span>
-        </a>
-      </div>
-      
-      {/* Main Button */}
+      {/* Main Button - Direct WhatsApp */}
       <button
-        onClick={toggleMenu}
+        onClick={openWhatsApp}
         className={`${isMobile ? 'p-3 w-12 h-12' : 'p-3 sm:p-4 w-12 h-12 sm:w-14 sm:h-14'} rounded-full flex items-center justify-center transition-all duration-300 
-          ${isOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-amber-400 hover:bg-amber-500'} 
-          ${isOpen ? 'text-white' : 'text-black'} 
-          ${isPulsing && !isOpen ? 'animate-pulse' : ''}
+          bg-emerald-500 hover:bg-emerald-600 text-white
+          ${isPulsing ? 'animate-pulse' : ''}
           transform hover:scale-105 active:scale-95 shadow-lg`}
-        aria-label={isOpen ? "Fechar menu de contato" : "Abrir menu de contato"}
+        aria-label="Abrir WhatsApp"
         style={{
-          boxShadow: isOpen 
-            ? '0 4px 12px rgba(239, 68, 68, 0.4)' 
-            : '0 4px 12px rgba(251, 191, 36, 0.4)'
+          boxShadow: '0 4px 12px rgba(16, 185, 129, 0.4)'
         }}
       >
-        {isOpen ? (
-          <X size={isMobile ? 16 : 18} className="sm:w-5 sm:h-5" />
-        ) : (
-          <div className={`${isMobile ? 'w-4 h-4' : 'w-4 h-4 sm:w-5 sm:h-5'}`}>
-            <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-full h-full object-contain" />
-          </div>
-        )}
+        <div className={`${isMobile ? 'w-4 h-4' : 'w-4 h-4 sm:w-5 sm:h-5'}`}>
+          <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-full h-full object-contain" />
+        </div>
       </button>
     </div>
   );
