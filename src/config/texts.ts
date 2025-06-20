@@ -114,7 +114,7 @@ export const siteTexts = {
         description: "Responsável pela apuração de impostos, entrega de obrigações acessórias e orientação sobre regimes tributários. Atua com foco na conformidade fiscal e no planejamento tributário estratégico para empresas de diversos portes."
       },
       { 
-        name: "Mariana Rodrigues", 
+        name: "Mari Rodrigues", 
         role: "Secretaria",
         crc: "",
         sector: "Setor de atendimento ao cliente",
