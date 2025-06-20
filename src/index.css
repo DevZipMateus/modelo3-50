@@ -116,11 +116,11 @@
   
   /* Buttons with hover effect */
   .btn-primary {
-    @apply bg-black hover:bg-neutral-900 text-amber-400 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm;
+    @apply bg-black hover:bg-neutral-900 text-amber-400 px-4 sm:px-6 py-2 sm:py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm text-sm sm:text-base;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-black border border-amber-400/20 px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm;
+    @apply bg-white hover:bg-gray-50 text-black border border-amber-400/20 px-4 sm:px-6 py-2 sm:py-3 rounded-md transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-amber-400/50 shadow-sm text-sm sm:text-base;
   }
   
   /* Card hover effects */
@@ -128,19 +128,19 @@
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
   
-  /* Section styling */
+  /* Section styling with responsive padding */
   .section {
-    @apply py-12 md:py-20;
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
   }
   
-  /* Container max widths */
+  /* Container max widths with responsive padding */
   .container-custom {
     @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
   
   /* Navigation link hover effect */
   .nav-link {
-    @apply relative py-2 px-3 text-gray-700 hover:text-amber-500 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative py-2 px-2 sm:px-3 text-gray-700 hover:text-amber-500 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-amber-500 after:transition-all after:duration-300 hover:after:w-full text-sm sm:text-base;
   }
   
   /* Image hover effect */
@@ -148,22 +148,22 @@
     @apply transition-all duration-500 hover:opacity-90 hover:scale-[1.02];
   }
   
-  /* Plan cards */
+  /* Plan cards with responsive padding */
   .plan-card {
-    @apply bg-white rounded-xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-md border border-neutral-100;
+    @apply bg-white rounded-xl p-4 sm:p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-md border border-neutral-100;
   }
   
   .plan-card-popular {
-    @apply bg-gradient-to-br from-white to-amber-50 rounded-xl p-6 md:p-8 shadow-md transition-all duration-300 hover:shadow-lg border border-amber-200 relative;
+    @apply bg-gradient-to-br from-white to-amber-50 rounded-xl p-4 sm:p-6 md:p-8 shadow-md transition-all duration-300 hover:shadow-lg border border-amber-200 relative;
   }
   
-  /* Feature list */
+  /* Feature list with responsive spacing */
   .feature-item {
-    @apply flex items-start mb-3;
+    @apply flex items-start mb-2 sm:mb-3;
   }
   
   .feature-icon {
-    @apply bg-amber-100 p-1.5 rounded-full mr-3 mt-0.5 flex-shrink-0 text-amber-600;
+    @apply bg-amber-100 p-1 sm:p-1.5 rounded-full mr-2 sm:mr-3 mt-0.5 flex-shrink-0 text-amber-600;
   }
   
   /* Floating animation */
@@ -184,5 +184,59 @@
   
   .pulse-attention {
     animation: attention-pulse 2s infinite;
+  }
+  
+  /* Responsive text utilities */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .text-responsive-sm {
+    @apply text-sm sm:text-base;
+  }
+  
+  .text-responsive-base {
+    @apply text-base sm:text-lg;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl;
+  }
+  
+  .text-responsive-2xl {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+  
+  .text-responsive-3xl {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+  
+  /* Responsive spacing utilities */
+  .space-responsive-x {
+    @apply space-x-2 sm:space-x-4;
+  }
+  
+  .space-responsive-y {
+    @apply space-y-2 sm:space-y-4;
+  }
+  
+  .gap-responsive {
+    @apply gap-2 sm:gap-4 md:gap-6;
+  }
+  
+  .p-responsive {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+  
+  .px-responsive {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .py-responsive {
+    @apply py-4 sm:py-6 lg:py-8;
   }
 }
