@@ -1,3 +1,4 @@
+
 export const siteTexts = {
   hero: {
     badge: "Mariano Contabilidade - Fortaleza/CE",
@@ -179,11 +180,11 @@ export const siteTexts = {
     },
     address: {
       title: "Endereço",
-      full: "Rua Castro e Silva, nº 942, Centro<br>Fortaleza - CE<br>Cep: 60.030-010"
+      full: "Rua Castro e Silva, nº 942<br>Centro - Fortaleza - CE<br>CEP: 60.030-010"
     },
     hours: {
       title: "Horário de Atendimento",
-      weekdays: "Segunda a sexta-feira, das 08h00 às 17h00",
+      weekdays: "Segunda a sexta-feira<br>das 08h00 às 17h00",
       weekdaysTime: ""
     }
   },
