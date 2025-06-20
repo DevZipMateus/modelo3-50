@@ -7,28 +7,28 @@ const team = [
     id: 1,
     name: 'Maria Silva',
     role: 'Diretora',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
+    image: '/lovable-uploads/bc63a39a-924f-43fc-9078-a01f2365cab3.png',
     delay: '0s'
   },
   {
     id: 2,
     name: 'Joel Antônio',
     role: 'Contador',
-    image: 'https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    image: '/lovable-uploads/7b52a53e-93b7-472e-89c7-1b9725d46d97.png',
     delay: '0.1s'
   },
   {
     id: 3,
     name: 'Jéssica Souza',
     role: 'Contadora',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80',
+    image: '/lovable-uploads/6d047fd0-96c2-4501-8383-f3ccea86bf87.png',
     delay: '0.2s'
   },
   {
     id: 4,
     name: 'Luiz Ricardo',
     role: 'Designer',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    image: '/lovable-uploads/becc6546-a49a-4db9-8c41-abd0009fac90.png',
     delay: '0.3s'
   }
 ];

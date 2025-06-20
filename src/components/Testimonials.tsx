@@ -8,40 +8,35 @@ const testimonials = [
     name: 'Charles Nobre Franco',
     position: '@suagaragemoficial',
     content: 'Desde 2013, a equipe da Mariano Contabilidade tem sido uma parceira fundamental na minha jornada. Sou muito grato pelo profissionalismo, dedicação e compromisso com que sempre conduziram tudo. Foram anos de confiança, crescimento e muito trabalho — e saber que posso contar com vocês faz toda a diferença. Obrigado por estarem sempre presentes com atenção e excelência. Que nossa parceria continue rendendo muitos frutos!',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+    rating: 5
   },
   {
     id: 2,
     name: 'Tatiano Ribeiro',
     position: '@ribeiromoveis_projetados',
     content: 'Estou completamente satisfeito com o serviço de contabilidade que recebi. Desde o início, a equipe foi profissional, atenciosa e extremamente competente. Esclareceram todas as minhas dúvidas com paciência, me orientaram com excelência sobre finanças e planejamento, e contribuíram diretamente para a organização e o crescimento da minha empresa. A agilidade e a precisão no atendimento me passaram muita confiança. Recomendo a quem busca um serviço contábil sério, transparente e comprometido.',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+    rating: 5
   },
   {
     id: 3,
     name: 'Ciro Mariano',
     position: '@profciromariano',
     content: 'Comecei minha vida profissional na Mariano Contabilidade e foi lá que construí a base que me levou até onde estou hoje. Aprendi muito sobre Departamento Pessoal e ganhei experiência que me abriu portas. Hoje atuo na área de educação, formando novos profissionais, e sou muito grato por tudo que vivi nesse início. A Mariano foi mais que um primeiro emprego — foi o início de uma trajetória com propósito.',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+    rating: 5
   },
   {
     id: 4,
     name: 'Noeliza Almeida',
     position: '@hojepodece',
     content: 'Escolher a Mariano Contabilidade foi uma das melhores decisões que já tomei, me orientaram de forma clara e objetiva e dentro da legalidade. Profissionais atenciosos, comprometidos e sempre disponíveis para tirar dúvidas e ajudar.',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+    rating: 5
   },
   {
     id: 5,
     name: 'Camila Mariane',
     position: '@marielasoficial',
     content: 'Com a Mariano contabilidade finalmente consegui colocar em ordem as questões financeiras da empresa, me salvou, super de confiança!!',
-    rating: 5,
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'
+    rating: 5
   }
 ];
 
@@ -76,39 +71,30 @@ const Testimonials = () => {
         <div className="max-w-4xl mx-auto relative">
           {/* Testimonial Card */}
           <div 
-            className="relative bg-white rounded-xl p-8 md:p-10 shadow-sm animate-fade-in"
+            className="relative bg-white rounded-xl p-8 md:p-10 shadow-sm animate-fade-in border border-gray-100"
             key={testimonials[activeIndex].id}
           >
             {/* Quotation Mark */}
             <div className="absolute -top-6 left-8 text-6xl text-corporate-blue/20">"</div>
             
             {/* Content */}
-            <div className="flex flex-col md:flex-row gap-8">
-              {/* Avatar */}
-              <div className="md:w-1/4 flex flex-col items-center">
-                <div className="w-20 h-20 rounded-full overflow-hidden mb-4">
-                  <img 
-                    src={testimonials[activeIndex].image} 
-                    alt={testimonials[activeIndex].name} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 text-center">{testimonials[activeIndex].name}</h4>
-                <p className="text-sm text-gray-600 text-center">{testimonials[activeIndex].position}</p>
+            <div className="text-center">
+              {/* Testimonial Text */}
+              <p className="text-gray-600 text-lg italic mb-6">
+                "{testimonials[activeIndex].content}"
+              </p>
+              
+              {/* Author Info */}
+              <div className="flex flex-col items-center">
+                <h4 className="text-lg font-semibold text-gray-900">{testimonials[activeIndex].name}</h4>
+                <p className="text-sm text-gray-600 mb-2">{testimonials[activeIndex].position}</p>
                 
                 {/* Rating */}
-                <div className="flex justify-center mt-2">
+                <div className="flex justify-center">
                   {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
                     <Star key={i} className="text-yellow-400 fill-current" size={16} />
                   ))}
                 </div>
-              </div>
-              
-              {/* Testimonial Text */}
-              <div className="md:w-3/4">
-                <p className="text-gray-600 text-lg italic mb-6">
-                  "{testimonials[activeIndex].content}"
-                </p>
               </div>
             </div>
           </div>
