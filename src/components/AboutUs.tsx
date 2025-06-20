@@ -1,37 +1,38 @@
 
 import React from 'react';
 import { Heart, Shield, Users, Target, CheckCircle, Clock } from 'lucide-react';
+import { siteTexts } from '../config/texts';
 
 const values = [
   {
     icon: Shield,
-    title: 'Ética',
-    description: 'Atuamos com integridade e responsabilidade em cada serviço prestado.'
+    title: siteTexts.about.values[0].title,
+    description: siteTexts.about.values[0].description
   },
   {
     icon: Heart,
-    title: 'Comprometimento',
-    description: 'Assumimos a contabilidade dos nossos clientes como se fosse nossa.'
+    title: siteTexts.about.values[1].title,
+    description: siteTexts.about.values[1].description
   },
   {
     icon: CheckCircle,
-    title: 'Clareza',
-    description: 'Explicamos o complexo de forma simples e acessível.'
+    title: siteTexts.about.values[2].title,
+    description: siteTexts.about.values[2].description
   },
   {
     icon: Users,
-    title: 'Empatia',
-    description: 'Respeitamos a jornada de cada cliente com escuta ativa e atendimento acolhedor.'
+    title: siteTexts.about.values[3].title,
+    description: siteTexts.about.values[3].description
   },
   {
     icon: Clock,
-    title: 'Pontualidade',
-    description: 'Cumprimos prazos e obrigações com rigor e organização.'
+    title: siteTexts.about.values[4].title,
+    description: siteTexts.about.values[4].description
   },
   {
     icon: Target,
-    title: 'Proximidade',
-    description: 'Mantemos um atendimento direto, humanizado e sempre disponível.'
+    title: siteTexts.about.values[5].title,
+    description: siteTexts.about.values[5].description
   }
 ];
 
@@ -42,15 +43,13 @@ const AboutUs = () => {
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="inline-block bg-amber-100 text-amber-600 font-medium px-4 py-1.5 rounded-full text-sm mb-4">
-            Sobre Nós
+            {siteTexts.about.badge}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            Mariano Contabilidade - Tradição e Confiança em Fortaleza
+            {siteTexts.about.title}
           </h2>
           <p className="text-neutral-600 text-lg leading-relaxed">
-            Somos um escritório especializado em soluções contábeis para MEIs, pequenas empresas e negócios do Simples Nacional, 
-            localizado no coração de Fortaleza. Nossa missão é oferecer não apenas números, mas segurança e tranquilidade 
-            para quem empreende.
+            {siteTexts.about.description}
           </p>
         </div>
 
@@ -58,18 +57,14 @@ const AboutUs = () => {
           {/* Left Content */}
           <div className="animate-fade-in">
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100">
-              <h3 className="text-2xl font-bold text-neutral-900 mb-6">Nossa Missão</h3>
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6">{siteTexts.about.missionTitle}</h3>
               <p className="text-neutral-600 mb-6 leading-relaxed">
-                Oferecer soluções contábeis com seriedade, clareza e acolhimento, contribuindo para o crescimento 
-                sustentável de micro e pequenas empresas. Atuar com proximidade e comprometimento, traduzindo o 
-                mundo contábil para a linguagem do empreendedor.
+                {siteTexts.about.missionText}
               </p>
               
-              <h3 className="text-2xl font-bold text-neutral-900 mb-6">Nossa Visão</h3>
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6">{siteTexts.about.visionTitle}</h3>
               <p className="text-neutral-600 leading-relaxed">
-                Ser reconhecida como referência em contabilidade humanizada no Ceará, especialmente para MEIs e 
-                empresas do Simples Nacional, sendo lembrada pela confiança, excelência e relacionamento próximo 
-                com o cliente.
+                {siteTexts.about.visionText}
               </p>
             </div>
           </div>
@@ -77,47 +72,19 @@ const AboutUs = () => {
           {/* Right Content */}
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-100">
-              <h3 className="text-2xl font-bold text-neutral-900 mb-6">Por que nos escolher?</h3>
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6">{siteTexts.about.whyChooseTitle}</h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="bg-amber-100 p-2 rounded-full mt-1">
-                    <CheckCircle className="text-amber-600" size={16} />
+                {siteTexts.about.whyChooseItems.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="bg-amber-100 p-2 rounded-full mt-1">
+                      <CheckCircle className="text-amber-600" size={16} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-neutral-900">{item.title}</h4>
+                      <p className="text-neutral-600 text-sm">{item.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-neutral-900">Equipe Experiente</h4>
-                    <p className="text-neutral-600 text-sm">Profissionais qualificados e em constante atualização</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="bg-amber-100 p-2 rounded-full mt-1">
-                    <Heart className="text-amber-600" size={16} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-neutral-900">Atendimento Humanizado</h4>
-                    <p className="text-neutral-600 text-sm">Relacionamento próximo e acolhedor com cada cliente</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="bg-amber-100 p-2 rounded-full mt-1">
-                    <Shield className="text-amber-600" size={16} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-neutral-900">Ambiente Acolhedor</h4>
-                    <p className="text-neutral-600 text-sm">Espaço confortável e organizado para receber nossos clientes</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="bg-amber-100 p-2 rounded-full mt-1">
-                    <Target className="text-amber-600" size={16} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-neutral-900">Foco em Resultados</h4>
-                    <p className="text-neutral-600 text-sm">Organização, transparência e comprometimento com seu sucesso</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -125,7 +92,7 @@ const AboutUs = () => {
 
         {/* Values Section */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center text-neutral-900 mb-12">Nossos Valores</h3>
+          <h3 className="text-3xl font-bold text-center text-neutral-900 mb-12">{siteTexts.about.valuesTitle}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((value, index) => (
               <div 
@@ -145,31 +112,19 @@ const AboutUs = () => {
 
         {/* Differentials */}
         <div className="bg-white rounded-2xl p-8 text-center shadow-sm border border-neutral-100">
-          <h3 className="text-2xl font-bold text-neutral-900 mb-8">Nossos Diferenciais</h3>
+          <h3 className="text-2xl font-bold text-neutral-900 mb-8">{siteTexts.about.differentialsTitle}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="animate-fade-in">
-              <div className="bg-amber-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-bold text-amber-600">MEI</span>
+            {siteTexts.about.differentials.map((differential, index) => (
+              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="bg-amber-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  {index === 0 && <span className="text-2xl font-bold text-amber-600">MEI</span>}
+                  {index === 1 && <span className="text-xl font-bold text-amber-600">SN</span>}
+                  {index === 2 && <Heart className="text-amber-600" size={24} />}
+                </div>
+                <h4 className="font-semibold text-neutral-900 mb-2">{differential.title}</h4>
+                <p className="text-neutral-600 text-sm">{differential.description}</p>
               </div>
-              <h4 className="font-semibold text-neutral-900 mb-2">Especialistas em MEI</h4>
-              <p className="text-neutral-600 text-sm">Conhecimento profundo das necessidades e particularidades dos Microempreendedores Individuais</p>
-            </div>
-            
-            <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="bg-amber-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <span className="text-xl font-bold text-amber-600">SN</span>
-              </div>
-              <h4 className="font-semibold text-neutral-900 mb-2">Simples Nacional</h4>
-              <p className="text-neutral-600 text-sm">Domínio completo do regime tributário mais utilizado pelas pequenas empresas brasileiras</p>
-            </div>
-            
-            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="bg-amber-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <Heart className="text-amber-600" size={24} />
-              </div>
-              <h4 className="font-semibold text-neutral-900 mb-2">Linguagem Acessível</h4>
-              <p className="text-neutral-600 text-sm">Traduzimos termos técnicos para uma comunicação clara e próxima da sua realidade</p>
-            </div>
+            ))}
           </div>
         </div>
       </div>

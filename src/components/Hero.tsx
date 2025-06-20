@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+import { siteTexts } from '../config/texts';
 
 const Hero = () => {
   const isMobile = useIsMobile();
@@ -16,21 +16,20 @@ const Hero = () => {
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-amber-100 text-amber-600 font-medium px-4 py-1.5 rounded-full text-sm mb-6 animate-fade-in">
-            Mariano Contabilidade - Fortaleza/CE
+            {siteTexts.hero.badge}
           </div>
           
           <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-white leading-tight mb-6 animate-fade-in`} style={{
             animationDelay: '0.1s'
           }}>
-            Mais que contabilidade.<br />
-            <span className="text-amber-400">Apoio, presença e confiança.</span>
+            {siteTexts.hero.title}<br />
+            <span className="text-amber-400">{siteTexts.hero.titleHighlight}</span>
           </h1>
           
           <p className="text-lg text-amber-200 mb-10 animate-fade-in max-w-3xl mx-auto" style={{
             animationDelay: '0.2s'
           }}>
-            Especialistas em MEI e Simples Nacional no coração de Fortaleza. Atendimento humanizado 
-            e soluções contábeis completas para que você possa focar no crescimento do seu negócio.
+            {siteTexts.hero.description}
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{
@@ -43,13 +42,13 @@ const Hero = () => {
               className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-md transition-all flex items-center justify-center gap-3 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-6 h-6" />
-              <span>Fale Conosco no WhatsApp</span>
+              <span>{siteTexts.hero.whatsappButton}</span>
             </a>
             <a 
               href="#services" 
               className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-md transition-all flex items-center justify-center gap-2 font-semibold backdrop-blur-sm"
             >
-              Nossos Serviços
+              {siteTexts.hero.servicesButton}
             </a>
           </div>
           
@@ -57,18 +56,12 @@ const Hero = () => {
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-amber-200/80 animate-fade-in" style={{
             animationDelay: '0.4s'
           }}>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-              <span className="text-sm">Especialistas em MEI</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-              <span className="text-sm">Simples Nacional</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-              <span className="text-sm">Atendimento Humanizado</span>
-            </div>
+            {siteTexts.hero.trustIndicators.map((indicator, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+                <span className="text-sm">{indicator}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

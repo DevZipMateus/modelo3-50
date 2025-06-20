@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Facebook, Instagram, Twitter, Linkedin, Menu, X } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
+import { siteTexts } from '../../config/texts';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,29 +36,20 @@ const Header = () => {
         <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
           {/* Contact Information */}
           <div className="flex flex-col md:flex-row md:space-x-6 text-sm text-gray-600 mb-2 md:mb-0 items-center">
-            <a href="mailto:marianocontabilidade@hotmail.com" className="flex items-center hover:text-amber-500 transition-colors duration-300 mb-1 md:mb-0">
+            <a href={`mailto:${siteTexts.header.email}`} className="flex items-center hover:text-amber-500 transition-colors duration-300 mb-1 md:mb-0">
               <Mail size={16} className="mr-2" />
-              marianocontabilidade@hotmail.com
+              {siteTexts.header.email}
             </a>
-            <a href="tel:+5585982384438" className="flex items-center hover:text-amber-500 transition-colors duration-300 whitespace-nowrap">
+            <a href={`tel:+55${siteTexts.header.phone.replace(/\D/g, '')}`} className="flex items-center hover:text-amber-500 transition-colors duration-300 whitespace-nowrap">
               <Phone size={16} className="mr-2" />
-              (85) 9 8238-4438
+              {siteTexts.header.phone}
             </a>
           </div>
           
           {/* Social Media Icons */}
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              
-            </a>
             <a href="https://www.instagram.com/marianocontabilidades?igsh=Ynhwa2d4ZDh0MnFu" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
               <Instagram size={18} />
-            </a>
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              
-            </a>
-            <a href="#" className="text-gray-500 hover:text-amber-500 transition-colors duration-300">
-              
             </a>
           </div>
         </div>
@@ -66,15 +58,15 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="text-2xl font-semibold text-amber-500 transition-all duration-300 transform hover:scale-[1.02]">
-            Mariano Contabilidade
+            {siteTexts.header.logo}
           </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-1">
-            <Link to="/" className="nav-link">Início</Link>
-            <a href="#about" className="nav-link">Sobre Nós</a>
-            <a href="#services" className="nav-link">Serviços</a>
-            <a href="#contact" className="nav-link">Contato</a>
+            <Link to="/" className="nav-link">{siteTexts.header.nav.home}</Link>
+            <a href="#about" className="nav-link">{siteTexts.header.nav.about}</a>
+            <a href="#services" className="nav-link">{siteTexts.header.nav.services}</a>
+            <a href="#contact" className="nav-link">{siteTexts.header.nav.contact}</a>
           </nav>
           
           {/* Mobile Menu Button */}
@@ -87,10 +79,10 @@ const Header = () => {
       {/* Mobile Navigation Menu */}
       <div className={`md:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}>
         <div className="container-custom py-4 flex flex-col space-y-3 border-t mt-4">
-          <Link to="/" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Início</Link>
-          <a href="#about" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Sobre Nós</a>
-          <a href="#services" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Serviços</a>
-          <a href="#contact" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Contato</a>
+          <Link to="/" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>{siteTexts.header.nav.home}</Link>
+          <a href="#about" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>{siteTexts.header.nav.about}</a>
+          <a href="#services" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>{siteTexts.header.nav.services}</a>
+          <a href="#contact" className="px-4 py-2 text-gray-700 hover:text-amber-500 hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>{siteTexts.header.nav.contact}</a>
         </div>
       </div>
     </header>

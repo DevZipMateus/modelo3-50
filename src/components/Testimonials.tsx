@@ -1,44 +1,14 @@
-
 import React, { useState } from 'react';
 import { Star, ArrowLeft, ArrowRight } from 'lucide-react';
+import { siteTexts } from '../config/texts';
 
-const testimonials = [
-  {
-    id: 1,
-    name: 'Charles Nobre Franco',
-    position: '@suagaragemoficial',
-    content: 'Desde 2013, a equipe da Mariano Contabilidade tem sido uma parceira fundamental na minha jornada. Sou muito grato pelo profissionalismo, dedicação e compromisso com que sempre conduziram tudo. Foram anos de confiança, crescimento e muito trabalho — e saber que posso contar com vocês faz toda a diferença. Obrigado por estarem sempre presentes com atenção e excelência. Que nossa parceria continue rendendo muitos frutos!',
-    rating: 5
-  },
-  {
-    id: 2,
-    name: 'Tatiano Ribeiro',
-    position: '@ribeiromoveis_projetados',
-    content: 'Estou completamente satisfeito com o serviço de contabilidade que recebi. Desde o início, a equipe foi profissional, atenciosa e extremamente competente. Esclareceram todas as minhas dúvidas com paciência, me orientaram com excelência sobre finanças e planejamento, e contribuíram diretamente para a organização e o crescimento da minha empresa. A agilidade e a precisão no atendimento me passaram muita confiança. Recomendo a quem busca um serviço contábil sério, transparente e comprometido.',
-    rating: 5
-  },
-  {
-    id: 3,
-    name: 'Ciro Mariano',
-    position: '@profciromariano',
-    content: 'Comecei minha vida profissional na Mariano Contabilidade e foi lá que construí a base que me levou até onde estou hoje. Aprendi muito sobre Departamento Pessoal e ganhei experiência que me abriu portas. Hoje atuo na área de educação, formando novos profissionais, e sou muito grato por tudo que vivi nesse início. A Mariano foi mais que um primeiro emprego — foi o início de uma trajetória com propósito.',
-    rating: 5
-  },
-  {
-    id: 4,
-    name: 'Noeliza Almeida',
-    position: '@hojepodece',
-    content: 'Escolher a Mariano Contabilidade foi uma das melhores decisões que já tomei, me orientaram de forma clara e objetiva e dentro da legalidade. Profissionais atenciosos, comprometidos e sempre disponíveis para tirar dúvidas e ajudar.',
-    rating: 5
-  },
-  {
-    id: 5,
-    name: 'Camila Mariane',
-    position: '@marielasoficial',
-    content: 'Com a Mariano contabilidade finalmente consegui colocar em ordem as questões financeiras da empresa, me salvou, super de confiança!!',
-    rating: 5
-  }
-];
+const testimonials = siteTexts.testimonials.list.map((testimonial, index) => ({
+  id: index + 1,
+  name: testimonial.name,
+  position: testimonial.position,
+  content: testimonial.content,
+  rating: 5
+}));
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -57,13 +27,13 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-corporate-blue/10 text-corporate-blue font-medium px-4 py-1.5 rounded-full text-sm mb-4">
-            Depoimentos
+            {siteTexts.testimonials.badge}
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            O que nossos clientes dizem
+            {siteTexts.testimonials.title}
           </h2>
           <p className="text-gray-600 text-lg">
-            Conheça a experiência de quem já utiliza nossos serviços e confia em nossa expertise.
+            {siteTexts.testimonials.description}
           </p>
         </div>
         
