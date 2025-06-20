@@ -1,12 +1,9 @@
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
-
 const Contact = () => {
   const isMobile = useIsMobile();
-  
-  return (
-    <section id="contact" className="section bg-neutral-100">
+  return <section id="contact" className="section bg-neutral-100">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -26,55 +23,44 @@ const Contact = () => {
           {/* WhatsApp Card */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in">
             <div className="bg-emerald-500 p-6 flex items-center justify-center">
-              <img 
-                src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" 
-                alt="WhatsApp" 
-                className="w-16 h-16"
-              />
+              <img src="/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png" alt="WhatsApp" className="w-16 h-16" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">WhatsApp</h3>
               <p className="text-neutral-600 mb-4">Atendimento rápido e prático</p>
-              <a 
-                href="https://wa.me/5511987654321" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
-              >
+              <a href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer" className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium">
                 <span>Enviar mensagem</span>
               </a>
             </div>
           </div>
           
           {/* Phone Card */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
+          animationDelay: '0.1s'
+        }}>
             <div className="bg-amber-400 p-6 flex items-center justify-center">
               <Phone className="w-16 h-16 text-white" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">Telefone</h3>
               <p className="text-neutral-600 mb-4">Fale diretamente conosco</p>
-              <a 
-                href="tel:+5511987654321"
-                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
-              >
+              <a href="tel:+5511987654321" className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium">
                 <span>(11) 98765-4321</span>
               </a>
             </div>
           </div>
           
           {/* Email Card */}
-          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="bg-white rounded-xl shadow-sm overflow-hidden animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
             <div className="bg-neutral-800 p-6 flex items-center justify-center">
               <Mail className="w-16 h-16 text-amber-400" />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-neutral-900 mb-2">E-mail</h3>
               <p className="text-neutral-600 mb-4">Envie sua mensagem</p>
-              <a 
-                href="mailto:contato@contabilidade.com"
-                className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium"
-              >
+              <a href="mailto:contato@contabilidade.com" className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-2 rounded-md inline-flex items-center justify-center gap-2 transition-all font-medium">
                 <span>contato@contabilidade.com</span>
               </a>
             </div>
@@ -91,7 +77,9 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-neutral-900 mb-2">Endereço</h4>
-                <p className="text-neutral-600">Av. Paulista, 1000 - Bela Vista, São Paulo - SP, 01310-100</p>
+                <p className="text-neutral-600">Fortaleza - CE
+
+RUA CASTRO E SILVA 942 CENTRO FORTALEZA - CE CEP: 60030-010</p>
               </div>
             </div>
             
@@ -117,8 +105,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
