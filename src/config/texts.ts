@@ -130,11 +130,36 @@ export const siteTexts = {
     title: "Conheça os profissionais por trás dos nossos serviços",
     description: "Nossa equipe de especialistas está pronta para oferecer as melhores soluções contábeis para o seu negócio.",
     members: [
-      { name: "Paloma Mariano", role: "Contadora – CRC: CE-027945/O-5"},
-      { name: "Mariano Junior", role: "Contador – CRC: CE-014818/O-5" },
-      { name: "Mariana Rodrigues", role: "Secretaria" },
-      { name: "Ubiratan Oliveira", role: "Contador – CRC: CE-014574-O/8" },
-      { name: "Jackson Pereira", role: "Contador – CRC: CE-026056-O/5" }
+      { 
+        name: "Paloma Mariano", 
+        role: "Contadora – CRC: CE-027945/O-5",
+        sector: "Setor Administrativo e departamento pessoal",
+        description: "Responsável pela gestão interna, organização de processos e rotinas trabalhistas. Atua garantindo eficiência operacional, conformidade legal e suporte completo ao cliente e à equipe."
+      },
+      { 
+        name: "Mariano Junior", 
+        role: "Contador – CRC: CE-014818/O-5",
+        sector: "Setor Fiscal tributário", 
+        description: "Responsável pela apuração de impostos, entrega de obrigações acessórias e orientação sobre regimes tributários. Atua com foco na conformidade fiscal e no planejamento tributário estratégico para empresas de diversos portes."
+      },
+      { 
+        name: "Mariana Rodrigues", 
+        role: "Secretaria",
+        sector: "Setor de atendimento ao cliente",
+        description: "Responsável por acolher, orientar e acompanhar clientes em todas as etapas do serviço. Atua com foco em agilidade, clareza na comunicação e excelência no relacionamento, garantindo uma experiência humanizada e eficiente."
+      },
+      { 
+        name: "Ubiratan Oliveira", 
+        role: "Contador – CRC: CE-014574-O/8",
+        sector: "Setor de Legalização",
+        description: "Responsável por abertura, alteração, regularização e baixa de empresas. Atua junto a órgãos públicos para garantir a conformidade legal do CNPJ, alvarás, licenças e registros necessários à atividade empresarial."
+      },
+      { 
+        name: "Jackson Pereira", 
+        role: "Contador – CRC: CE-026056-O/5",
+        sector: "Setor de mentoria e suporte contábil",
+        description: "Responsável pelo apoio técnico e estratégico para os contadores e as empresas, com orientações personalizadas, revisão de processos e atualizações normativas. Soluções práticas para o dia a dia do escritório contábil."
+      }
     ]
   },
   testimonials: {
