@@ -115,7 +115,7 @@ export const siteTexts = {
       },
       { 
         name: "Mari Rodrigues", 
-        role: "Secretaria",
+        role: "Secretária",
         crc: "",
         sector: "Setor de atendimento ao cliente",
         description: "Responsável por acolher, orientar e acompanhar clientes em todas as etapas do serviço. Atua com foco em agilidade, clareza na comunicação e excelência no relacionamento, garantindo uma experiência humanizada e eficiente."
