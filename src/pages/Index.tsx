@@ -6,7 +6,6 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
-import Plans from '../components/Plans';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import FloatingButton from '../components/FloatingButton';
@@ -26,7 +25,6 @@ const Index = () => {
         <Services />
         <AboutUs />
         <Team />
-        <Plans />
         <Testimonials />
         <Contact />
       </main>
