@@ -62,12 +62,12 @@ const Team = () => {
           </p>
         </div>
         
-        {/* Team Grid - cards padronizados com altura fixa */}
+        {/* Team Grid - cards with flexible height to accommodate full text */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
           {team.map(member => (
             <div 
               key={member.id} 
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in mx-auto w-full max-w-sm sm:max-w-none min-w-0 h-[480px] flex flex-col" 
+              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in mx-auto w-full max-w-sm sm:max-w-none min-w-0 flex flex-col" 
               style={{ animationDelay: member.delay }}
             >
               <div className="relative overflow-hidden h-56 sm:h-64 lg:h-72 flex-shrink-0">
@@ -78,13 +78,13 @@ const Team = () => {
                 />
               </div>
               
-              <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between">
-                <div>
+              <div className="p-4 sm:p-6 flex-1 flex flex-col">
+                <div className="mb-4">
                   <p className="text-lg sm:text-xl font-semibold text-gray-900 mb-1 leading-tight break-words">{member.name}</p>
                   <p className="text-corporate-blue mb-2 font-medium text-sm sm:text-base break-words">{member.role}</p>
                   <p className="text-orange-500 mb-3 font-medium text-xs sm:text-sm leading-tight break-words">{member.sector}</p>
                 </div>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed break-words line-clamp-4">{member.description}</p>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed break-words">{member.description}</p>
               </div>
             </div>
           ))}
