@@ -1,96 +1,175 @@
 
 import React from 'react';
-import { Check, ArrowRight } from 'lucide-react';
+import { Heart, Shield, Users, Target, CheckCircle, Clock } from 'lucide-react';
+
+const values = [
+  {
+    icon: Shield,
+    title: 'Ética',
+    description: 'Atuamos com integridade e responsabilidade em cada serviço prestado.'
+  },
+  {
+    icon: Heart,
+    title: 'Comprometimento',
+    description: 'Assumimos a contabilidade dos nossos clientes como se fosse nossa.'
+  },
+  {
+    icon: CheckCircle,
+    title: 'Clareza',
+    description: 'Explicamos o complexo de forma simples e acessível.'
+  },
+  {
+    icon: Users,
+    title: 'Empatia',
+    description: 'Respeitamos a jornada de cada cliente com escuta ativa e atendimento acolhedor.'
+  },
+  {
+    icon: Clock,
+    title: 'Pontualidade',
+    description: 'Cumprimos prazos e obrigações com rigor e organização.'
+  },
+  {
+    icon: Target,
+    title: 'Proximidade',
+    description: 'Mantemos um atendimento direto, humanizado e sempre disponível.'
+  }
+];
 
 const AboutUs = () => {
   return (
-    <section id="about" className="section bg-gray-50">
+    <section id="about" className="section bg-neutral-50">
       <div className="container-custom">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Left Column - Image */}
-          <div className="lg:w-1/2 animate-fade-in">
-            <div className="relative">
-              <div className="bg-corporate-blue/20 w-full h-full absolute -left-6 -top-6 rounded-lg"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                alt="Equipe de contabilidade trabalhando" 
-                className="relative z-10 rounded-lg shadow-lg w-full object-cover h-[400px]"
-              />
-              <div className="absolute -bottom-8 -right-8 bg-white rounded-lg shadow-lg p-6 z-20 animate-float">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-corporate-blue rounded-full mr-2"></div>
-                    <span className="text-sm font-medium text-gray-600">Desde 2010</span>
+        {/* Section Header */}
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <div className="inline-block bg-amber-100 text-amber-600 font-medium px-4 py-1.5 rounded-full text-sm mb-4">
+            Sobre Nós
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+            Mariano Contabilidade - Tradição e Confiança em Fortaleza
+          </h2>
+          <p className="text-neutral-600 text-lg leading-relaxed">
+            Somos um escritório especializado em soluções contábeis para MEIs, pequenas empresas e negócios do Simples Nacional, 
+            localizado no coração de Fortaleza. Nossa missão é oferecer não apenas números, mas segurança e tranquilidade 
+            para quem empreende.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Left Content */}
+          <div className="animate-fade-in">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100">
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6">Nossa Missão</h3>
+              <p className="text-neutral-600 mb-6 leading-relaxed">
+                Oferecer soluções contábeis com seriedade, clareza e acolhimento, contribuindo para o crescimento 
+                sustentável de micro e pequenas empresas. Atuar com proximidade e comprometimento, traduzindo o 
+                mundo contábil para a linguagem do empreendedor.
+              </p>
+              
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6">Nossa Visão</h3>
+              <p className="text-neutral-600 leading-relaxed">
+                Ser reconhecida como referência em contabilidade humanizada no Ceará, especialmente para MEIs e 
+                empresas do Simples Nacional, sendo lembrada pela confiança, excelência e relacionamento próximo 
+                com o cliente.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Content */}
+          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-100">
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6">Por que nos escolher?</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="bg-amber-100 p-2 rounded-full mt-1">
+                    <CheckCircle className="text-amber-600" size={16} />
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-corporate-lightBlue rounded-full mr-2"></div>
-                    <span className="text-sm font-medium text-gray-600">+500 clientes</span>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900">Equipe Experiente</h4>
+                    <p className="text-neutral-600 text-sm">Profissionais qualificados e em constante atualização</p>
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-gray-900">13</div>
-                <div className="text-sm text-gray-600">Anos de experiência em contabilidade</div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="bg-amber-100 p-2 rounded-full mt-1">
+                    <Heart className="text-amber-600" size={16} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900">Atendimento Humanizado</h4>
+                    <p className="text-neutral-600 text-sm">Relacionamento próximo e acolhedor com cada cliente</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="bg-amber-100 p-2 rounded-full mt-1">
+                    <Shield className="text-amber-600" size={16} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900">Ambiente Acolhedor</h4>
+                    <p className="text-neutral-600 text-sm">Espaço confortável e organizado para receber nossos clientes</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="bg-amber-100 p-2 rounded-full mt-1">
+                    <Target className="text-amber-600" size={16} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900">Foco em Resultados</h4>
+                    <p className="text-neutral-600 text-sm">Organização, transparência e comprometimento com seu sucesso</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          
-          {/* Right Column - Content */}
-          <div className="lg:w-1/2">
-            <div className="inline-block bg-corporate-blue/10 text-corporate-blue font-medium px-4 py-1.5 rounded-full text-sm mb-4 animate-fade-in">
-              Sobre Nós
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Excelência em serviços contábeis para o seu negócio
-            </h2>
-            <p className="text-gray-600 mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Desde 2010, nosso escritório se dedica ao auxílio administrativo de empresas de diversos portes e segmentos, 
-              utilizando técnicas contábeis e administrativas modernas para oferecer o melhor serviço aos nossos clientes.
-            </p>
-            <p className="text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              Nossa equipe técnica está em constante capacitação para oferecer soluções inovadoras na área contábil, 
-              garantindo tranquilidade e segurança para que você possa focar no crescimento do seu negócio.
-            </p>
-            
-            {/* Key Points */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                <div className="bg-corporate-blue/10 p-1 rounded-full mr-3 mt-1">
-                  <Check className="text-corporate-blue" size={16} />
+        </div>
+
+        {/* Values Section */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center text-neutral-900 mb-12">Nossos Valores</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {values.map((value, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm border border-neutral-100 hover:shadow-md hover:border-amber-200 transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="bg-amber-100 p-3 rounded-lg inline-block mb-4">
+                  <value.icon className="text-amber-600" size={24} />
                 </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Equipe Qualificada</h4>
-                  <p className="text-gray-600">Profissionais especializados e em constante atualização</p>
-                </div>
+                <h4 className="text-lg font-semibold text-neutral-900 mb-2">{value.title}</h4>
+                <p className="text-neutral-600 text-sm leading-relaxed">{value.description}</p>
               </div>
-              
-              <div className="flex items-start animate-fade-in" style={{ animationDelay: '0.5s' }}>
-                <div className="bg-corporate-blue/10 p-1 rounded-full mr-3 mt-1">
-                  <Check className="text-corporate-blue" size={16} />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Atendimento Personalizado</h4>
-                  <p className="text-gray-600">Cada cliente recebe atenção individualizada para suas necessidades</p>
-                </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Differentials */}
+        <div className="bg-white rounded-2xl p-8 text-center shadow-sm border border-neutral-100">
+          <h3 className="text-2xl font-bold text-neutral-900 mb-8">Nossos Diferenciais</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="animate-fade-in">
+              <div className="bg-amber-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <span className="text-2xl font-bold text-amber-600">MEI</span>
               </div>
-              
-              <div className="flex items-start animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                <div className="bg-corporate-blue/10 p-1 rounded-full mr-3 mt-1">
-                  <Check className="text-corporate-blue" size={16} />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Tecnologia Avançada</h4>
-                  <p className="text-gray-600">Utilizamos as mais modernas ferramentas do mercado</p>
-                </div>
-              </div>
+              <h4 className="font-semibold text-neutral-900 mb-2">Especialistas em MEI</h4>
+              <p className="text-neutral-600 text-sm">Conhecimento profundo das necessidades e particularidades dos Microempreendedores Individuais</p>
             </div>
             
-            <a 
-              href="#contact" 
-              className="bg-black hover:bg-neutral-800 text-amber-400 px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2 font-medium inline-flex animate-fade-in" 
-              style={{ animationDelay: '0.7s' }}
-            >
-              <span>Conheça Nossos Diferenciais</span>
-              <ArrowRight size={18} />
-            </a>
+            <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="bg-amber-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <span className="text-xl font-bold text-amber-600">SN</span>
+              </div>
+              <h4 className="font-semibold text-neutral-900 mb-2">Simples Nacional</h4>
+              <p className="text-neutral-600 text-sm">Domínio completo do regime tributário mais utilizado pelas pequenas empresas brasileiras</p>
+            </div>
+            
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="bg-amber-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Heart className="text-amber-600" size={24} />
+              </div>
+              <h4 className="font-semibold text-neutral-900 mb-2">Linguagem Acessível</h4>
+              <p className="text-neutral-600 text-sm">Traduzimos termos técnicos para uma comunicação clara e próxima da sua realidade</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,12 @@
+
 import React from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
+
 const Hero = () => {
   const isMobile = useIsMobile();
-  return <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-neutral-900 to-neutral-800 relative overflow-hidden">
+  
+  return (
+    <section className="pt-28 pb-12 md:pt-36 md:pb-20 bg-gradient-to-br from-neutral-900 to-neutral-800 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
       
       {/* Decorative elements */}
@@ -10,31 +14,61 @@ const Hero = () => {
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl"></div>
       
       <div className="container-custom relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block bg-amber-100 text-amber-600 font-medium px-4 py-1.5 rounded-full text-sm mb-6 animate-fade-in">
+            Mariano Contabilidade - Fortaleza/CE
+          </div>
           
           <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl md:text-5xl lg:text-6xl'} font-bold text-white leading-tight mb-6 animate-fade-in`} style={{
-          animationDelay: '0.1s'
-        }}>
-            Soluções contábeis inteligentes para empresas de todos os portes
+            animationDelay: '0.1s'
+          }}>
+            Mais que contabilidade.<br />
+            <span className="text-amber-400">Apoio, presença e confiança.</span>
           </h1>
           
-          <p className="text-lg text-amber-200 mb-10 animate-fade-in" style={{
-          animationDelay: '0.2s'
-        }}>
-            Entre em contato conosco e solicite um orçamento para começar a usar hoje mesmo nossa contabilidade digital e eficiente.
+          <p className="text-lg text-amber-200 mb-10 animate-fade-in max-w-3xl mx-auto" style={{
+            animationDelay: '0.2s'
+          }}>
+            Especialistas em MEI e Simples Nacional no coração de Fortaleza. Atendimento humanizado 
+            e soluções contábeis completas para que você possa focar no crescimento do seu negócio.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{
-          animationDelay: '0.3s'
-        }}>
-            <a href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer" className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2">
-              <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-5 h-5" />
-              <span>Solicitar Orçamento</span>
+            animationDelay: '0.3s'
+          }}>
+            <a 
+              href="https://wa.me/5585982384438" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-md transition-all flex items-center justify-center gap-3 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <img src="/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png" alt="WhatsApp" className="w-6 h-6" />
+              <span>Fale Conosco no WhatsApp</span>
             </a>
-            <a href="#services" className="btn-secondary">
-              Nossos serviços
+            <a 
+              href="#services" 
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-md transition-all flex items-center justify-center gap-2 font-semibold backdrop-blur-sm"
+            >
+              Nossos Serviços
             </a>
+          </div>
+          
+          {/* Trust indicators */}
+          <div className="mt-12 flex flex-wrap justify-center gap-8 text-amber-200/80 animate-fade-in" style={{
+            animationDelay: '0.4s'
+          }}>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+              <span className="text-sm">Especialistas em MEI</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+              <span className="text-sm">Simples Nacional</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+              <span className="text-sm">Atendimento Humanizado</span>
+            </div>
           </div>
         </div>
       </div>
@@ -46,6 +80,8 @@ const Hero = () => {
           </path>
         </svg>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
