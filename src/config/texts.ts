@@ -1,4 +1,3 @@
-
 export const siteTexts = {
   hero: {
     badge: "Mariano Contabilidade - Fortaleza/CE",
@@ -57,71 +56,41 @@ export const siteTexts = {
   },
   about: {
     badge: "Sobre Nós",
-    title: "Mariano Contabilidade - Tradição e Confiança em Fortaleza",
-    description: "Somos um escritório especializado em soluções contábeis para MEIs, pequenas empresas e negócios do Simples Nacional, localizado no coração de Fortaleza. Nossa missão é oferecer não apenas números, mas segurança e tranquilidade para quem empreende.",
-    missionTitle: "Nossa Missão",
-    missionText: "Oferecer soluções contábeis com seriedade, clareza e acolhimento, contribuindo para o crescimento sustentável de micro e pequenas empresas. Atuar com proximidade e comprometimento, traduzindo o mundo contábil para a linguagem do empreendedor.",
-    visionTitle: "Nossa Visão",
-    visionText: "Ser reconhecida como referência em contabilidade humanizada no Ceará, especialmente para MEIs e empresas do Simples Nacional, sendo lembrada pela confiança, excelência e relacionamento próximo com o cliente.",
-    whyChooseTitle: "Por que nos escolher?",
-    whyChooseItems: [
-      {
-        title: "Equipe Experiente",
-        description: "Profissionais qualificados e em constante atualização"
-      },
-      {
-        title: "Atendimento Humanizado",
-        description: "Relacionamento próximo e acolhedor com cada cliente"
-      },
-      {
-        title: "Ambiente Acolhedor",
-        description: "Espaço confortável e organizado para receber nossos clientes"
-      },
-      {
-        title: "Foco em Resultados",
-        description: "Organização, transparência e comprometimento com seu sucesso"
-      }
-    ],
-    valuesTitle: "Nossos Valores",
+    title: "Nossa História",
+    description: "A Mariano Contabilidade atua no mercado desde 1993, com uma trajetória marcada pela seriedade, compromisso e proximidade com os clientes. Fundado por Mariano Martins, o escritório se consolidou como referência em atendimento contábil acessível, responsável e focado nas reais necessidades dos empreendedores.",
+    historyText: "Hoje, a administração está sob a direção de seus filhos, Mariano Junior e Paloma Mariano, que seguem o legado com a mesma ética e dedicação, trazendo inovação, modernização e uma gestão ainda mais próxima e estratégica.",
+    approachText: "Com uma abordagem clara e humana, a Mariano Contabilidade oferece suporte completo nas áreas fiscal, pessoal, legal e administrativa, sendo reconhecida como \"o escritório da sua empresa\" — sempre ao lado do cliente, em cada desafio e conquista.",
+    objectiveText: "Nosso objetivo é proporcionar tranquilidade, organização e crescimento sustentável para micro e pequenas empresas, profissionais autônomos, MEIs e negócios em expansão. Mais que um escritório de contabilidade, somos parceiros da sua jornada empresarial.",
+    tagline: "Mariano Contabilidade – Profissionalismo a serviço de quem empreende, desde 1993.",
+    missionTitle: "Missão",
+    missionText: "Oferecer serviços contábeis com responsabilidade, clareza e proximidade, garantindo suporte técnico e estratégico para a gestão sustentável de micro, pequenas e médias empresas. Atuar com excelência e atenção personalizada, valorizando a confiança e o crescimento de cada cliente.",
+    visionTitle: "Visão",
+    visionText: "Ser reconhecida como uma contabilidade de referência no Ceará, unindo tradição, inovação e atendimento humano, sendo o suporte seguro e constante para empreendedores que desejam estruturar e expandir seus negócios com segurança e planejamento.",
+    valuesTitle: "Valores",
     values: [
       {
-        title: "Ética",
-        description: "Atuamos com integridade e responsabilidade em cada serviço prestado."
+        title: "Compromisso com o cliente",
+        description: "Tratamos cada negócio como único, com respeito, dedicação e atenção às particularidades de cada empresa."
       },
       {
-        title: "Comprometimento",
-        description: "Assumimos a contabilidade dos nossos clientes como se fosse nossa."
+        title: "Ética e transparência",
+        description: "Agimos com integridade em todas as relações e processos."
       },
       {
-        title: "Clareza",
-        description: "Explicamos o complexo de forma simples e acessível."
+        title: "Responsabilidade técnica",
+        description: "Priorizamos a precisão, a legalidade e a excelência nos serviços prestados."
       },
       {
-        title: "Empatia",
-        description: "Respeitamos a jornada de cada cliente com escuta ativa e atendimento acolhedor."
+        title: "Tradição e inovação",
+        description: "Unimos a experiência de quem atua desde 1993 com a visão moderna de uma nova geração."
       },
       {
-        title: "Pontualidade",
-        description: "Cumprimos prazos e obrigações com rigor e organização."
+        title: "Relacionamento humano",
+        description: "Valorizamos o contato direto, a escuta ativa e o acolhimento nas relações com nossos clientes."
       },
       {
-        title: "Proximidade",
-        description: "Mantemos um atendimento direto, humanizado e sempre disponível."
-      }
-    ],
-    differentialsTitle: "Nossos Diferenciais",
-    differentials: [
-      {
-        title: "Especialistas em MEI",
-        description: "Conhecimento profundo das necessidades e particularidades dos Microempreendedores Individuais"
-      },
-      {
-        title: "Simples Nacional",
-        description: "Domínio completo do regime tributário mais utilizado pelas pequenas empresas brasileiras"
-      },
-      {
-        title: "Linguagem Acessível",
-        description: "Traduzimos termos técnicos para uma comunicação clara e próxima da sua realidade"
+        title: "Crescimento sustentável",
+        description: "Trabalhamos para que nossos clientes cresçam com solidez, organização e segurança jurídica."
       }
     ]
   },
